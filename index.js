@@ -32,13 +32,11 @@ function tallyCreator() {
   };
 }
 let tallyOne = tallyCreator();
-//created another method to be added at the tally array as a notification when dispatch is called
-tallyOne.subscribe((count1) => {
-  console.log(`TallyKeeper:`, count1);
-});
+tallyOne.getState();
 tallyOne.dispatch("ADD");
+tallyOne.dispatch("ADD");
+tallyOne.getState();
 tallyOne.dispatch("SUBTRACT");
-tallyOne.dispatch("SUBTRACT");
-tallyOne.dispatch("SUBTRACT");
-tallyOne.dispatch("SUBTRACT");
+tallyOne.getState();
+tallyOne.dispatch("RESET");
 tallyOne.getState();
